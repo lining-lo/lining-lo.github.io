@@ -1,1 +1,195 @@
-<h1>hello world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>lo’s notebook</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="lo's technical notebook" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 浏览器图标 -->
+  <link rel="icon" href="./logo.png" type="image/png">
+  <!-- 引入 NProgress 进度条样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
+  <!-- Gitalk 的 CSS ，美化评论区样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <!-- Gitalk 的 JS ，实现评论功能逻辑 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script> -->
+  <!-- 自定义样式 - 优化视觉体验 -->
+  <style>
+    /* 侧边栏标题样式 */
+    .app-name-link {
+      font-family: system-ui;
+    }
+
+    /* 分组标题样式 */
+    .sidebar strong {
+      display: block;
+      padding: 0.5rem 0;
+      color: #555;
+      font-size: 13px;
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      position: relative;
+    }
+
+    /* 统计数字样式 */
+    .sidebar strong::after {
+      content: attr(data-count);
+      position: absolute;
+      right: 10px;
+      color: #999;
+      font-weight: 400;
+      margin-right: 10px;
+      font-size: 13px;
+    }
+
+    /* 分组标题内容链接样式 */
+    .sidebar ul li a {
+      font-size: 13px;
+    }
+
+    /* 自定义docsify-copy-code样式 */
+    .docsify-copy-code-button {
+      background: #42b983 !important;
+      color: white !important;
+    }
+
+    .docsify-copy-code-button::after {
+      content: '📋';
+      margin-left: 5px;
+    }
+
+
+    pre[class*="language-"] {
+      background-color: #2d2d2d;
+      border-radius: 6px;
+      padding: 1em;
+      margin: 0.5em 0;
+      overflow: auto;
+    }
+
+    /* 自定义代码样式 */
+    .markdown-section code {
+      font-weight: 600;
+    }
+
+    /* 自定义代码块样式 */
+    .lang-html {
+      font-weight: 600;
+    }
+
+    /* 自定义注释颜色 */
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: #999999;
+    }
+
+    /* 自定义关键字颜色 */
+    .token.keyword {
+      color: #933195;
+    }
+
+    /* 自定义数据类型颜色 */
+    .token.string,
+    .token.boolean,
+    .token.number,
+    .token.property {
+      color: #525252;
+    }
+
+    /* 自定义方法颜色 */
+    .token.function {
+      color: #2a8d60;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- <div id="gitalk-container"></div> -->
+
+  <script>
+    // 文档加载
+    window.$docsify = {
+      // 侧边栏标题
+      name: 'lo’s notebook',
+      // youce图标链接
+      repo: 'https://github.com/lining-lo/',
+      // 启用侧边栏 _sidebar
+      loadSidebar: true,
+      // 侧边栏搜索配置
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Type to search',
+        noData: 'No Results',
+      },
+      // 侧边栏文件统计插件
+      plugins: [
+        function (hook) {
+          hook.doneEach(function () {
+            // 选择所有侧边栏分组标题（根据实际DOM结构调整选择器）
+            const groupTitles = document.querySelectorAll('.sidebar strong');
+            groupTitles.forEach(title => {
+              // 获取当前分组的子项数量
+              const subItems = title.parentNode.parentNode.children[1];
+              let count = 0;
+              if (subItems && subItems.tagName === 'UL') {
+                count = subItems.querySelectorAll('li').length;
+              }
+              // 设置数据属性存储计数
+              title.setAttribute('data-count', `${count}`);
+            });
+          });
+        }
+      ]
+    }
+  </script>
+
+  <script>
+    // const gitalk = new Gitalk({
+    //   // 第一步申请的 OAuth App 的 Client ID
+    //   clientID: 'Ov23likpTJkNymls370P',
+    //   // 第一步申请的 OAuth App 的 Client Secret（注意保密，别暴露在前端代码里！生产环境建议后端处理）
+    //   clientSecret: '9f211acc9a2d31a3c3373bef78a619db0c830479',
+    //   // 第一步创建的、用来存评论的仓库名（比如 blog-comments ）
+    //   repo: 'blog-comments',
+    //   // 仓库的所有者（GitHub 用户名或组织名，比如 lining-lo ）
+    //   owner: 'lining-lo',
+    //   // 仓库的管理员（能管理评论的用户，数组形式，填自己用户名就行，比如 ['lining-lo'] ）
+    //   admin: ['lining-lo'],
+    //   // 标记当前页面的唯一 ID ，一般用页面路径（保证每个页面评论独立），比如 location.pathname 
+    //   id: location.pathname,
+    //   // 评论区语言，比如 'zh-CN' 是简体中文
+    //   language: 'zh-CN',
+    //   // 是否开启无干扰模式（全屏遮罩那种，false 就是普通模式 ）
+    //   distractionFreeMode: false,
+    //   // 自动创建 Issue ，如果没找到对应页面的 Issue ，true 会自动创建（建议先手动创建试试，再开自动 ）
+    //   createIssueManually: true,
+    //   // Issue 的标签，方便在 GitHub 筛选，比如 ['Gitalk', '评论'] 
+    //   labels: ['Gitalk', '评论'],
+    // });
+    // // 渲染评论区到容器里
+    // gitalk.render('gitalk-container');  
+  </script>
+
+  <!-- 脚本加载顺序 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 侧边栏搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <!-- 侧边栏折叠插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 代码复制插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- Gitalk 的 JS ，实现评论功能逻辑 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+</body>
+
+</html>
