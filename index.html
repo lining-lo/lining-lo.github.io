@@ -15,8 +15,8 @@
   <!-- Gitalk 的 CSS ，美化评论区样式 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <!-- Gitalk 的 JS ，实现评论功能逻辑 -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <!-- 自定义样式 - 优化视觉体验 -->
   <style>
     /* 侧边栏标题样式 */
@@ -112,7 +112,7 @@
 
 <body>
   <div id="app"></div>
-  <!-- <div id="gitalk-container"></div> -->
+  <div id="gitalk-container"></div>
 
   <script>
     // 文档加载
@@ -153,30 +153,30 @@
   </script>
 
   <script>
-    // const gitalk = new Gitalk({
-    //   // 第一步申请的 OAuth App 的 Client ID
-    //   clientID: 'Ov23likpTJkNymls370P',
-    //   // 第一步申请的 OAuth App 的 Client Secret（注意保密，别暴露在前端代码里！生产环境建议后端处理）
-    //   clientSecret: '9f211acc9a2d31a3c3373bef78a619db0c830479',
-    //   // 第一步创建的、用来存评论的仓库名（比如 blog-comments ）
-    //   repo: 'blog-comments',
-    //   // 仓库的所有者（GitHub 用户名或组织名，比如 lining-lo ）
-    //   owner: 'lining-lo',
-    //   // 仓库的管理员（能管理评论的用户，数组形式，填自己用户名就行，比如 ['lining-lo'] ）
-    //   admin: ['lining-lo'],
-    //   // 标记当前页面的唯一 ID ，一般用页面路径（保证每个页面评论独立），比如 location.pathname 
-    //   id: location.pathname,
-    //   // 评论区语言，比如 'zh-CN' 是简体中文
-    //   language: 'zh-CN',
-    //   // 是否开启无干扰模式（全屏遮罩那种，false 就是普通模式 ）
-    //   distractionFreeMode: false,
-    //   // 自动创建 Issue ，如果没找到对应页面的 Issue ，true 会自动创建（建议先手动创建试试，再开自动 ）
-    //   createIssueManually: true,
-    //   // Issue 的标签，方便在 GitHub 筛选，比如 ['Gitalk', '评论'] 
-    //   labels: ['Gitalk', '评论'],
-    // });
-    // // 渲染评论区到容器里
-    // gitalk.render('gitalk-container');  
+    const gitalk = new Gitalk({
+      // 第一步申请的 OAuth App 的 Client ID
+      clientID: 'Ov23likpTJkNymls370P',
+      // 第一步申请的 OAuth App 的 Client Secret（注意保密，别暴露在前端代码里！生产环境建议后端处理）
+      clientSecret: '9f211acc9a2d31a3c3373bef78a619db0c830479',
+      // 第一步创建的、用来存评论的仓库名（比如 blog-comments ）
+      repo: 'blog-comments',
+      // 仓库的所有者（GitHub 用户名或组织名，比如 lining-lo ）
+      owner: 'lining-lo',
+      // 仓库的管理员（能管理评论的用户，数组形式，填自己用户名就行，比如 ['lining-lo'] ）
+      admin: ['lining-lo'],
+      // 标记当前页面的唯一 ID ，一般用页面路径（保证每个页面评论独立），比如 location.pathname 
+      id: location.pathname,
+      // 评论区语言，比如 'zh-CN' 是简体中文
+      language: 'zh-CN',
+      // 是否开启无干扰模式（全屏遮罩那种，false 就是普通模式 ）
+      distractionFreeMode: false,
+      // 自动创建 Issue ，如果没找到对应页面的 Issue ，true 会自动创建（建议先手动创建试试，再开自动 ）
+      createIssueManually: true,
+      // Issue 的标签，方便在 GitHub 筛选，比如 ['Gitalk', '评论'] 
+      labels: ['Gitalk', '评论'],
+    });
+    // 渲染评论区到容器里
+    gitalk.render('gitalk-container');  
   </script>
 
   <!-- 脚本加载顺序 -->
