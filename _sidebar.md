@@ -1,5 +1,5 @@
 - **HTML**
-  - [DOCTYPE](/Html/HTML语义化.md)
+  - [DOCTYPE](/Html/DOCTYPE.md)
   - [HTML语义化](/Html/HTML语义化.md) 
   - [Cookie与Session](/Html/Cookie与Session.md)
 
@@ -25,6 +25,10 @@
 
 - **Webpack**
   - [Laravel 教程]()
+  - [Composer 使用]()
+
+- **杂七杂八的知识**
+  - [练习仓库设计](/杂七杂八的知识/练习仓库设计.md)
   - [Composer 使用]()
 
 - **报错记录**
