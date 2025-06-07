@@ -12,9 +12,7 @@
   <link rel="icon" href="./logo.png" type="image/png">
   <!-- 引入 NProgress 进度条样式 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
-  <!-- Gitalk 的 CSS ，美化评论区样式 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  
+
   <!-- 自定义样式 - 优化视觉体验 -->
   <style>
     /* 侧边栏标题样式 */
@@ -109,7 +107,7 @@
 
 <body>
   <div id="app"></div>
-  <div id="gitalk-container"></div>
+
 
   <script>
     // 文档加载
@@ -126,6 +124,11 @@
         paths: 'auto',
         placeholder: 'Type to search',
         noData: 'No Results',
+      },
+      // 配置cusdis评论
+      cusdis: {
+        host: 'https://cusdis.com',
+        appId: '63a8f4c8-ff02-4a1d-a1c6-5c012ef23864',
       },
       // 侧边栏文件统计插件
       plugins: [
@@ -145,26 +148,6 @@
             });
           });
         },
-        
-        // Gitalk 插件初始化
-        function(hook) {
-          hook.doneEach(function() {
-            // 确保DOM加载完成后再初始化Gitalk
-            if (typeof Gitalk !== 'undefined' && document.getElementById('gitalk-container')) {
-              const gitalk = new Gitalk({
-                clientID: 'Ov23likpTJkNymls370P',
-                clientSecret: '9f211acc9a2d31a3c3373bef78a619db0c830479',
-                repo: 'blog-comments',
-                owner: 'lining-lo',
-                admin: ['lining-lo'],
-                id: decodeURI(window.location.pathname),
-              });
-              
-              // 渲染评论区
-              gitalk.render('gitalk-container');
-            }
-          });
-        }
       ]
     }
   </script>
@@ -177,8 +160,9 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <!-- 代码复制插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- Gitalk 的 JS - 仅保留一个 -->
-  <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <!-- cusdis评论插件 -->
+  <script src="https://cusdis.com/js/cusdis.docsify.js"></script>
+
 </body>
 
 </html>
