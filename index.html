@@ -14,9 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
   <!-- Gitalk 的 CSS ，美化评论区样式 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <!-- Gitalk 的 JS ，实现评论功能逻辑 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  
   <!-- 自定义样式 - 优化视觉体验 -->
   <style>
     /* 侧边栏标题样式 */
@@ -62,7 +60,6 @@
       content: '📋';
       margin-left: 5px;
     }
-
 
     pre[class*="language-"] {
       background-color: #2d2d2d;
@@ -147,36 +144,29 @@
               title.setAttribute('data-count', `${count}`);
             });
           });
+        },
+        
+        // Gitalk 插件初始化
+        function(hook) {
+          hook.doneEach(function() {
+            // 确保DOM加载完成后再初始化Gitalk
+            if (typeof Gitalk !== 'undefined' && document.getElementById('gitalk-container')) {
+              const gitalk = new Gitalk({
+                clientID: 'Ov23likpTJkNymls370P',
+                clientSecret: '9f211acc9a2d31a3c3373bef78a619db0c830479',
+                repo: 'blog-comments',
+                owner: 'lining-lo',
+                admin: ['lining-lo'],
+                id: decodeURI(window.location.pathname),
+              });
+              
+              // 渲染评论区
+              gitalk.render('gitalk-container');
+            }
+          });
         }
       ]
     }
-  </script>
-
-  <script>
-    const gitalk = new Gitalk({
-      // 第一步申请的 OAuth App 的 Client ID
-      clientID: 'Ov23likpTJkNymls370P',
-      // 第一步申请的 OAuth App 的 Client Secret（注意保密，别暴露在前端代码里！生产环境建议后端处理）
-      clientSecret: '9f211acc9a2d31a3c3373bef78a619db0c830479',
-      // 第一步创建的、用来存评论的仓库名（比如 blog-comments ）
-      repo: 'blog-comments',
-      // 仓库的所有者（GitHub 用户名或组织名，比如 lining-lo ）
-      owner: 'lining-lo',
-      // 仓库的管理员（能管理评论的用户，数组形式，填自己用户名就行，比如 ['lining-lo'] ）
-      admin: ['lining-lo'],
-      // 标记当前页面的唯一 ID ，一般用页面路径（保证每个页面评论独立），比如 location.pathname 
-      id: location.pathname,
-      // 评论区语言，比如 'zh-CN' 是简体中文
-      language: 'zh-CN',
-      // 是否开启无干扰模式（全屏遮罩那种，false 就是普通模式 ）
-      distractionFreeMode: false,
-      // 自动创建 Issue ，如果没找到对应页面的 Issue ，true 会自动创建（建议先手动创建试试，再开自动 ）
-      createIssueManually: true,
-      // Issue 的标签，方便在 GitHub 筛选，比如 ['Gitalk', '评论'] 
-      labels: ['Gitalk', '评论'],
-    });
-    // 渲染评论区到容器里
-    gitalk.render('gitalk-container');  
   </script>
 
   <!-- 脚本加载顺序 -->
@@ -187,8 +177,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <!-- 代码复制插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- Gitalk 的 JS ，实现评论功能逻辑 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <!-- Gitalk 的 JS - 仅保留一个 -->
   <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 </body>
 
