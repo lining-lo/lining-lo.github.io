@@ -2,7 +2,7 @@
 
 ES6（ECMAScript 2015）为 JavaScript 带来了许多重要的新特性，显著提升了代码的可读性和开发效率。以下是一些核心特性的介绍：
 
-**1. 箭头函数（Arrow Functions）**
+### **1. 箭头函数（Arrow Functions）**
 
 提供了更简洁的函数写法，并且不会绑定自己的 `this`：
 
@@ -16,7 +16,7 @@ const sum = function(a, b) {
 const sum = (a, b) => a + b;
 ```
 
-**2.块级作用域变量（let 和 const）**
+### **2.块级作用域变量（let 和 const）**
 
 `let` 和 `const` 声明具有块级作用域，解决了 `var` 的变量提升问题：
 
@@ -29,7 +29,7 @@ if (true) {
 // x 和 y 在此处不可用
 ```
 
-**3.解构赋值（Destructuring）**
+### **3.解构赋值（Destructuring）**
 
 允许从数组或对象中提取值并赋值给变量：
 
@@ -41,7 +41,7 @@ const [a, b] = [1, 2];
 const { name, age } = { name: 'Alice', age: 30 };
 ```
 
-**4.默认参数（Default Parameters）**
+### **4.默认参数（Default Parameters）**
 
 函数参数可以设置默认值：
 
@@ -53,7 +53,7 @@ function greet(name = 'Guest') {
 greet(); // 输出: Hello, Guest!
 ```
 
-**5.扩展运算符（Spread Operator）**
+### **5.扩展运算符（Spread Operator）**
 
 用 `...` 展开数组或对象：
 
@@ -67,7 +67,7 @@ const obj1 = { a: 1 };
 const obj2 = { ...obj1, b: 2 }; // { a: 1, b: 2 }
 ```
 
-**6.类（Classes）**
+### **6.类（Classes）**
 
 ```javascript
 class Person {
@@ -83,7 +83,7 @@ class Person {
 const alice = new Person('Alice');
 ```
 
-**7.Promise 对象**
+### **7.Promise 对象**
 
 简化了异步编程，避免回调地狱：
 
@@ -99,7 +99,7 @@ fetchData()
   .catch(error => console.error(error));
 ```
 
-**8.模块化（Modules）**
+### **8.模块化（Modules）**
 
 支持 `import` 和 `export` 语法：
 
@@ -111,7 +111,7 @@ export const PI = 3.14;
 import { PI } from './module.js';
 ```
 
-**9.模板字符串（Template Literals）**
+### **9.模板字符串（Template Literals）**
 
 使用反引号 ` 允许嵌入表达式：
 
@@ -120,7 +120,7 @@ const name = 'Alice';
 console.log(`Hello, ${name}!`); // 输出: Hello, Alice!
 ```
 
-**10.增强的对象字面量**
+### **10.增强的对象字面量**
 
 对象可以更简洁地定义方法和属性：
 
@@ -134,7 +134,7 @@ const person = {
 };
 ```
 
-**11. Map 和 Set 数据结构**
+### **11. Map 和 Set 数据结构**
 
 - `Map`：存储键值对，键可以是任意类型。
 - `Set`：存储唯一值，没有重复项。
@@ -155,7 +155,7 @@ set.delete(2);
 console.log(set.has(3)); // true
 ```
 
-**11.Object 方法扩展**
+### **11.Object 方法扩展**
 
 - `Object.assign()`：用于对象的浅拷贝和合并。
 - `Object.keys()/values()/entries()`：返回对象的键、值或键值对数组。
@@ -174,7 +174,7 @@ console.log(Object.values(person)); // ["Alice", 30]
 console.log(Object.entries(person)); // [["name", "Alice"], ["age", 30]]
 ```
 
-**12.数组方法扩展**
+### **12.数组方法扩展**
 
 - `Array.from()`：从类数组对象或可迭代对象创建新数组。
 - `Array.find()/findIndex()`：查找符合条件的元素或索引。
@@ -195,7 +195,7 @@ console.log(numbers.includes(5)); // true
 console.log(numbers.includes(10)); // false
 ```
 
-**13.字符串方法扩展**
+### **13.字符串方法扩展**
 
 - `String.includes()`：判断字符串是否包含子字符串。
 - `String.repeat()`：重复字符串指定次数。

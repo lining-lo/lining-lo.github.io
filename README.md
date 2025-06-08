@@ -27,6 +27,9 @@ Hello～要是觉得还不错，别忘了在版本库给个 star 呀 😊​
 ## CSS
 - [如何实现左侧固定，右侧自适应](https://github.com/lining-lo/lining-lo.github.io/blob/master/Css/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B7%A6%E4%BE%A7%E5%9B%BA%E5%AE%9A%EF%BC%8C%E5%8F%B3%E4%BE%A7%E8%87%AA%E9%80%82%E5%BA%94.md)
 - [如何实现3列均分布](https://github.com/lining-lo/lining-lo.github.io/blob/master/Css/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B03%E5%88%97%E5%9D%87%E5%88%86%E5%B8%83.md)
+- [如何实现水平垂直居中]()
+- [说一说浮动]()
+- [BFC块级格式化上下文]()
 
 ## JavaScript
 - [如何判断一个数是整数](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E6%98%AF%E6%95%B4%E6%95%B0.md)
@@ -39,6 +42,14 @@ Hello～要是觉得还不错，别忘了在版本库给个 star 呀 😊​
 - [说一说BigInt](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/%E8%AF%B4%E4%B8%80%E8%AF%B4BigInt.md)
 - [说一说Promise](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/%E8%AF%B4%E4%B8%80%E8%AF%B4Promise.md)
 - [同步与异步的区别](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+- [数组的常用方法总结]()
+
+## Vue
+- [Vue3新特性]()
+
+## Nodejs
+- [说一说跨域]()
+- [HTTP状态码]()
 
 ## 杂七杂八的知识
 - [练习仓库的设计](https://github.com/lining-lo/lining-lo.github.io/blob/master/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%9F%A5%E8%AF%86/%E7%BB%83%E4%B9%A0%E4%BB%93%E5%BA%93%E8%AE%BE%E8%AE%A1.md)
