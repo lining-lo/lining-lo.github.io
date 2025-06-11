@@ -1,7 +1,10 @@
 - **HTML**
   - [DOCTYPE](/Html/DOCTYPE.md)
   - [HTML语义化](/Html/HTML语义化.md) 
-  - [Cookie与Session](/Html/Cookie与Session.md)
+  - [行内元素与块元素](/Html/行内元素与块元素.md)
+  - [HTML5新元素与新特性](/Html/HTML5新元素与新特性.md)
+  - [cookie、sessionStorage和localStorage](/Html/cookie、sessionStorage和localStorage.md)
+  - [script标签的三个属性](/Html/script标签的三个属性.md)
 
 - **CSS**
   - [3列均分布](/Css/如何实现3列均分布.md)
@@ -34,6 +37,7 @@
   - [原型与原型链](/JavaScript/原型与原型链.md)
   - [对象构造函数的方法](/JavaScript/对象构造函数的方法.md)
   - [实现Promise.all](/JavaScript/实现Promise.all.md)
+  - [Serivce Worker](/JavaScript/Serivce%20Worker.md)
 
 - **Vue**
   - [Vue3新特性](/Vue/Vue3新特性.md)
@@ -53,6 +57,12 @@
   - [HTTP状态码](/Nodejs/HTTP状态码.md)
   - [GET请求与POST请求](/Nodejs/GET请求与POST请求.md)
   - [HTTP缓存](/Nodejs/HTTP缓存.md)
+  - [Cookie与Session](/Nodejs/Cookie与Session.md)
+
+- **Git**
+  - [Git常用命令](/Git/Git常用命令.md)
+  - [遇到冲突怎么解决](/Git/遇到冲突怎么解决.md)
+  - [Rebase与Merge的区别](/Git/Rebase与Merge的区别.md)
 
 - **杂七杂八的知识**
   - [练习仓库设计](/杂七杂八的知识/练习仓库设计.md)

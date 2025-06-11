@@ -22,7 +22,9 @@ Hello～要是觉得还不错，别忘了在版本库给个 star 呀 😊​
 ## HTML
 - [DOCTYPE](https://github.com/lining-lo/lining-lo.github.io/blob/master/Html/DOCTYPE.md)
 - [HTML语义化](https://github.com/lining-lo/lining-lo.github.io/blob/master/Html/HTML%E8%AF%AD%E4%B9%89%E5%8C%96.md)
-- [Cookie与Session](https://github.com/lining-lo/lining-lo.github.io/blob/master/Html/Cookie%E4%B8%8ESession.md)
+- [行内元素与块元素]()
+- [HTML5新元素与新特性]()
+- [script标签的三个属性]()
 
 ## CSS
 - [如何实现左侧固定，右侧自适应](https://github.com/lining-lo/lining-lo.github.io/blob/master/Css/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B7%A6%E4%BE%A7%E5%9B%BA%E5%AE%9A%EF%BC%8C%E5%8F%B3%E4%BE%A7%E8%87%AA%E9%80%82%E5%BA%94.md)
@@ -31,7 +33,7 @@ Hello～要是觉得还不错，别忘了在版本库给个 star 呀 😊​
 - [说一说浮动](https://github.com/lining-lo/lining-lo.github.io/blob/master/Css/%E8%AF%B4%E4%B8%80%E8%AF%B4%E6%B5%AE%E5%8A%A8.md)
 - [BFC块级格式化上下文](https://github.com/lining-lo/lining-lo.github.io/blob/master/Css/BFC%E5%9D%97%E7%BA%A7%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%8A%E4%B8%8B%E6%96%87.md)
 - [LESS如何转换为CSS](https://github.com/lining-lo/lining-lo.github.io/blob/master/Css/LESS%E5%A6%82%E4%BD%95%E8%BD%AC%E6%8D%A2%E4%B8%BACSS.md)
-- [CSS选择器]()
+- [CSS选择器](https://github.com/lining-lo/lining-lo.github.io/blob/master/Css/CSS%E9%80%89%E6%8B%A9%E5%99%A8.md)
 
 ## JavaScript
 - [如何判断一个数是整数](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E6%98%AF%E6%95%B4%E6%95%B0.md)
@@ -55,6 +57,7 @@ Hello～要是觉得还不错，别忘了在版本库给个 star 呀 😊​
 - [对象构造函数的方法](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/%E5%AF%B9%E8%B1%A1%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95.md)
 - [JS事件循环](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/JS%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF.md)
 - [实现Promise.all](https://github.com/lining-lo/lining-lo.github.io/blob/master/JavaScript/%E5%AE%9E%E7%8E%B0Promise.all.md)
+- [Serivce Worker]()
 
 ## Vue
 - [Vue3新特性](https://github.com/lining-lo/lining-lo.github.io/blob/master/Vue/Vue3%E6%96%B0%E7%89%B9%E6%80%A7.md)
@@ -71,6 +74,12 @@ Hello～要是觉得还不错，别忘了在版本库给个 star 呀 😊​
 - [HTTP状态码](https://github.com/lining-lo/lining-lo.github.io/blob/master/Nodejs/HTTP%E7%8A%B6%E6%80%81%E7%A0%81.md)
 - [GET请求与POST请求](https://github.com/lining-lo/lining-lo.github.io/blob/master/Nodejs/GET%E8%AF%B7%E6%B1%82%E4%B8%8EPOST%E8%AF%B7%E6%B1%82.md)
 - [HTTP缓存](https://github.com/lining-lo/lining-lo.github.io/blob/master/Nodejs/HTTP%E7%BC%93%E5%AD%98.md)
+- [Cookie与Session](https://github.com/lining-lo/lining-lo.github.io/blob/master/Nodejs/Cookie%E4%B8%8ESession.md)
+
+## Git
+- [Git常用命令]()
+- [遇到冲突怎么解决]()
+- [Rebase与Merge的区别]()
 
 ## 杂七杂八的知识
 - [练习仓库的设计](https://github.com/lining-lo/lining-lo.github.io/blob/master/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%9F%A5%E8%AF%86/%E7%BB%83%E4%B9%A0%E4%BB%93%E5%BA%93%E8%AE%BE%E8%AE%A1.md)
