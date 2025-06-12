@@ -5,6 +5,10 @@
   - [HTML5新元素与新特性](/Html/HTML5新元素与新特性.md)
   - [cookie、sessionStorage和localStorage](/Html/cookie、sessionStorage和localStorage.md)
   - [script标签的三个属性](/Html/script标签的三个属性.md)
+  - [严格模式与混杂模式](/Html/严格模式与混杂模式.md)
+  - [HTML三层架构](/Html/HTML三层架构.md)
+  - [iframe的作用及优缺点](/Html/iframe的作用及优缺点.md)
+  - [Web标准与W3C](/Html/Web标准与W3C.md)
 
 - **CSS**
   - [3列均分布](/Css/如何实现3列均分布.md)
